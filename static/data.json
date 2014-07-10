@@ -1,0 +1,33 @@
+{
+    "timeline":
+    {
+        "headline": "Palantíri",
+        "type": "default",
+        "text": "<p>A generic, opensource, event/activity tracking portal.</p>",
+        "asset": {
+            "media":"",
+            "credit":"",
+            "caption":""
+        },
+        "date": [
+            {
+                "startDate": "2014,07,10",
+                "endDate": "2014,07,11",
+                "headline": "Prototype Ready",
+                "text": "Started off with the generic OpenShift Node.js cartridge, the app reached a prototype phase where it can show the timeline of events, fed from a JSON store.",
+                "asset": {
+                    "media": ""
+                }
+            }
+        ],
+        "era": [
+            {
+                "startDate": "2014,1,1",
+                "endDate": "2014,12,31",
+                "headline": "Palantíri Development Timeline",
+                "text": "",
+                "tag": ""
+            }
+        ]
+    }
+}

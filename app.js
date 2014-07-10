@@ -19,7 +19,10 @@ app.use("/", express.static(path.join(__dirname, 'static')))
 
 // Setup Routes
 app.get(["/", "/index", "/index.html"], function (req, res) {
-  res.render('index.html')
+  res.render("index.html")
+})
+app.get(["/add", "/new", "/submit"], function (req, res) {
+  res.render("new.html")
 })
 
 // Start Server

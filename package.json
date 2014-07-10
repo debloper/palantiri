@@ -1,7 +1,7 @@
 {
   "name": "Palantiri",
   "version": "0.0.1",
-  "description": "An opensource event/activity tracking portal",
+  "description": "A generic, opensource, event/activity tracking portal",
   "keywords": [
     "OpenShift",
     "Node.js",
