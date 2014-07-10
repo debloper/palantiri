@@ -1,35 +1,46 @@
 {
-  "name": "OpenShift-Sample-App",
-  "version": "1.0.0",
-  "description": "OpenShift Sample Application",
+  "name": "Palantiri",
+  "version": "0.0.1",
+  "description": "An opensource event/activity tracking portal",
   "keywords": [
     "OpenShift",
     "Node.js",
     "application",
-    "openshift"
+    "openshift",
+    "palantiri",
+    "tolkien",
+    "middle earth",
+    "activity",
+    "tracking",
+    "timeline"
   ],
   "author": {
-    "name": "OpenShift",
-    "email": "ramr@example.org",
-    "url": "http://www.openshift.com/"
+    "name": "Soumya Deb",
+    "email": "debloper@gmail.com",
+    "url": "http://debs.io/"
   },
-  "homepage": "http://www.openshift.com/",
+  "homepage": "http://code.debs.io/palantiri",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openshift/origin-server"
+    "url": "https://github.com/debloper/palantiri"
   },
 
   "engines": {
-    "node": ">= 0.6.0",
+    "node": ">= 0.10.0",
     "npm": ">= 1.0.0"
   },
 
   "dependencies": {
     "express": "~3.4.4"
   },
+
+  "scripts": {
+    "start": "node ./app.js"
+  },
+
   "devDependencies": {},
   "bundleDependencies": [],
 
   "private": true,
-  "main": "server.js"
+  "main": "app.js"
 }
