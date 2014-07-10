@@ -31,7 +31,8 @@
   },
 
   "dependencies": {
-    "express": ">=4.5.x"
+    "express": ">=4.5.x",
+    "nunjucks": ">=1.0.x"
   },
 
   "scripts": {
