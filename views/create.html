@@ -34,6 +34,9 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
+  <!-- Lastly, scripts -->
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
 </head>
 
 <body>
@@ -42,8 +45,20 @@
     <h1><a href="index.html">Palantíri</a></h1>
   </nav>
 
-  <h2>Coming Soon... wait for it! ;)</h2>
-  <p>Meanwhile, <a href="/">check out the timeline</a>.</p>
+  <section>
+      <input type="text" id="eventName" />
+      <button id="postTrigger">Create</button>
+  </section>
+
+  <script>
+  $("#postTrigger").click(function () {
+    $.ajax({
+      type: "POST",
+      url: "/event/create",
+      data: { input: $("#eventName").val() }
+    }).done( function (data) { console.log(data) } )
+  })
+  </script>
 
 </body>
 

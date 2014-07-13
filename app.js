@@ -3,9 +3,11 @@
 var express = require("express")
   , config  = require("./config")
   , jinja   = require("nunjucks")
+  , body    = require("body-parser")
   , path    = require("path")
   , file    = require("fs")
 
+var db  = require("monk")(config.DB_PATH)
 var app = express()
 
 // Configure Templating
@@ -15,6 +17,8 @@ jinja.configure('views', {
 })
 
 // Configure Application
+app.use(body.json())
+app.use(body.urlencoded({ extended: false }))
 app.use("/", express.static(path.join(__dirname, 'static')))
 
 // Setup Routes
@@ -26,7 +30,14 @@ app.get("/event/create", function (req, res) {
   res.render("create.html")
 })
 app.post("/event/create", function (req, res) {
-  console.log(req.body)
+  var events = db.get("events")
+  events.insert(req.body.input, function (error) {
+    if (error) {
+        res.json(500, { message: error })
+    } else {
+        res.json(200, { event: req.body.input })
+    }
+  })
 })
 
 // Start Server
