@@ -18,11 +18,15 @@ jinja.configure('views', {
 app.use("/", express.static(path.join(__dirname, 'static')))
 
 // Setup Routes
+// TODO: verbs used directly; replace/modularize them with `use`
 app.get(["/", "/index", "/index.html"], function (req, res) {
   res.render("index.html")
 })
-app.get(["/add", "/new", "/submit"], function (req, res) {
-  res.render("new.html")
+app.get("/event/create", function (req, res) {
+  res.render("create.html")
+})
+app.post("/event/create", function (req, res) {
+  console.log(req.body)
 })
 
 // Start Server
