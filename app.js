@@ -31,11 +31,11 @@ app.get("/event/create", function (req, res) {
 })
 app.post("/event/create", function (req, res) {
   var events = db.get("events")
-  events.insert(req.body.input, function (error) {
+  events.insert(req.body, function (error) {
     if (error) {
         res.json(500, { message: error })
     } else {
-        res.json(200, { event: req.body.input })
+        res.json(200, req.body)
     }
   })
 })

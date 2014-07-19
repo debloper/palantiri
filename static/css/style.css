@@ -83,6 +83,42 @@ footer a { color: #C30; }
   margin:             1rem auto !important;
   border-radius:      4px;
 }
+#addNewEvent {
+  width:              800px;
+  margin:             2rem auto;
+}
+#addNewEvent > input {
+  color:              #666;
+  font-size:          2rem;
+  padding:            0.5rem 1rem;
+}
+#eventName, #eventDesc {
+  width:              100%;
+  margin:             0.5rem auto;
+  display:            block;
+}
+#eventDate {
+  width:              80%;
+  margin:             0 auto;
+  display:            inline-block;
+}
+#postTrigger {
+  color:              #666;
+  font-size:          2rem;
+  float:              right;
+  margin:             0;
+  height:             68px;
+  padding:            0.5rem 1.5rem;
+  display:            inline-block;
+}
+#successAck {
+  display:            none;
+  color:              #364;
+  padding:            0.5rem 1rem;
+  border:             1px solid #8b9;
+  border-radius:      4px;
+  background:         #dec;
+}
 
 /* 2. Pseudoclass */
 .portal:hover {
