@@ -26,6 +26,14 @@ app.use("/", express.static(path.join(__dirname, 'static')))
 app.get(["/", "/index", "/index.html"], function (req, res) {
   res.render("index.html")
 })
+app.get("/events", function (req, res) {
+  var events = db.get("events")
+    , payload = require("./static/data.json")
+  events.find({}, function (err, doc) {
+    payload.timeline.date = doc
+    res.json(200, payload)
+  })
+})
 app.get("/event/create", function (req, res) {
   res.render("create.html")
 })

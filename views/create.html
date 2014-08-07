@@ -51,9 +51,9 @@
       type: "POST",
       url: "/event/create",
       data: {
-        date: $("#eventDate").val().split("-").join(","),
-        name: $("#eventName").val(),
-        desc: $("#eventDesc").val()
+        startDate: $("#eventDate").val().split("-").join(","),
+        headline: $("#eventName").val(),
+        text: $("#eventDesc").val()
       }
     }).done( function (data) {
       document.getElementById("successAck").style.display = "block"
